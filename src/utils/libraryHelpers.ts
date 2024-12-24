@@ -1,4 +1,4 @@
-import {launchImageLibrary, Asset} from 'react-native-image-picker';
+import { launchImageLibrary, Asset } from 'react-native-image-picker';
 import DocumentPicker, {
   DocumentPickerResponse,
 } from 'react-native-document-picker';
@@ -20,7 +20,7 @@ export const pickImage = (onMediaPickedUp: MediaPickedCallback) => {
       } else if (response.errorCode) {
         console.log('ImagePicker Error: ', response.errorMessage);
       } else {
-        const {assets} = response;
+        const { assets } = response;
         if (assets && assets.length > 0) {
           const selectedImage = assets[0];
           onMediaPickedUp(selectedImage);
@@ -60,8 +60,8 @@ export const formatFileSize = (sizeInBytes: number): string => {
 
 
 
-export const checkFilePermissions = async (platform:string) => {
-  if(platform === 'android') {
+export const checkFilePermissions = async (platform: string) => {
+  if (platform === 'android') {
     try {
       const granted = await PermissionsAndroid.requestMultiple([
         PermissionsAndroid.PERMISSIONS.READ_EXTERNAL_STORAGE,
