@@ -12,6 +12,7 @@ import com.facebook.react.defaults.DefaultReactNativeHost
 import com.facebook.react.soloader.OpenSourceMergedSoMapping
 import com.facebook.soloader.SoLoader
 import com.zoontek.rnpermissions.RNPermissionsPackage
+import com.asterinet.react.tcpsocket.TcpSocketPackage;
 
 class MainApplication : Application(), ReactApplication {
 
@@ -22,6 +23,7 @@ class MainApplication : Application(), ReactApplication {
               // Packages that cannot be autolinked yet can be added manually here, for example:
               // add(MyReactNativePackage())
               add(RNPermissionsPackage())
+              add(TcpSocketPackage())
             }
 
         override fun getJSMainModuleName(): String = "index"
