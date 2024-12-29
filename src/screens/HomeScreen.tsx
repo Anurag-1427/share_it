@@ -1,4 +1,4 @@
-import { View, Text, ScrollView } from 'react-native'
+import { View, ScrollView } from 'react-native'
 import React, { FC } from 'react'
 import { commonStyles } from '../styles/commonStyles'
 import HomeHeader from '../components/home/HomeHeader'
